@@ -1,0 +1,12 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    /* display: none; */
+}
+
+.top {
+    width: 1px;
+    height: 5px;
+    background: gold;
+}
