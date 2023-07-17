@@ -72,10 +72,24 @@
 // })
 
 
-$.get({
-    url:"https://jsonplaceholder.typicode.com/users",
-    success:function(res){
-      let text=   res.map((x)=>`<li> ${x.name} </li>`)
-      $("#list").html(text)
-    }
+// $.get({
+//     url:"https://jsonplaceholder.typicode.com/users",
+//     success:function(res){
+//       let text=   res.map((x)=>`<li> ${x.name} </li>`)
+//       $("#list").html(text)
+//     }
+// })
+
+
+
+$("#click").click(()=>{
+    let username = $("#username").val()
+    let urlapi = "https://api.github.com/users/"+username
+    $.get({
+        url:urlapi,
+        success:function(res){
+            $("#img").attr("src",res.avatar_url)
+            console.log(res.avatar_url)
+        }
+    })
 })
