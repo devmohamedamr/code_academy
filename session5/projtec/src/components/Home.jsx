@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import User from './User';
 
 export default class Home extends Component {
     constructor(){
@@ -15,11 +16,13 @@ export default class Home extends Component {
   render() {
     return (
         <>
-            <div className='container'>
+            {/* <div className='container'>
                 <div className='row'>
                     {this.state.cards.map((card)=> <Card title={card.title} desc={card.desc} /> )}
                 </div>
-            </div>
+            </div> */}
+
+            <User name='mohamed' />
         </>
     );
   }
