@@ -1,0 +1,8 @@
+=- install react 
+	=> npx create-react-app project_name
+=- install bootstap 
+	=> npm i bootstrap 
+=- install router
+	=> npm i react-router-dom
+=- install axios 
+	=> npm i axios
