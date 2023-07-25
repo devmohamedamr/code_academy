@@ -6,3 +6,5 @@
 	=> npm i react-router-dom
 =- install axios 
 	=> npm i axios
+=- install react hook form 
+	=> npm i react-hook-form
