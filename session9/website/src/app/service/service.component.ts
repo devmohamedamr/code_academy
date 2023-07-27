@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent {
-
+  service_items:Array<string> =[
+    "UI/UX Design",
+    "mohamed",
+    "ahmed",
+    "eslam"
+  ]
 }
