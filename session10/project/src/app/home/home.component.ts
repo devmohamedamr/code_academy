@@ -6,8 +6,10 @@ import { UsersService } from '../service/users.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  data:any;
   constructor(public users:UsersService){
       this.users.getusers().subscribe((res)=>{
+        this.data = res
         console.log(res)
       })
   }
