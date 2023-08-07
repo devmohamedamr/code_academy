@@ -14,3 +14,11 @@ function show(){
    $query = mysqli_query($connect,$sql);
    return mysqli_fetch_all($query,MYSQLI_ASSOC);
 }
+
+
+function delete($id){
+   $connect = mysqli_connect("localhost","root","","codeacademy_crud");
+   $sql = "DELETE FROM `categories` WHERE `id` = $id";
+   $query = mysqli_query($connect,$sql);
+   return mysqli_affected_rows($connect);
+}
