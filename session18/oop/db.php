@@ -36,5 +36,17 @@ class db {
        
         mysqli_query($this->connection,"UPDATE `$table` SET $new WHERE `id` = $id");
     }
+
+    function insert($table,$data){
+        $columns = "";
+        $values = "";
+        foreach($data as $key => $value){
+            $columns .= "`$key`,";
+            $values .= "'$value',";
+        }
+        $newcolumns = rtrim($columns,",");
+        $newvalues = rtrim($values,",");
+        mysqli_query($this->connection,"INSERT INTO `$table` ($newcolumns) VALUES ($newvalues) ");
+    }
 }
 

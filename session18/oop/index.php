@@ -134,9 +134,10 @@ require "db.php";
 
 $db = new db("localhost","root","","codeacademy_crud");
 $array = [
-    "name"=>"oman",
+    "name"=>"ahmed",
+    "user_id"=>1
 ];
-$res = $db->update("categories",$array,2);
+$res = $db->insert("categories",$array);
 // $res = $db->select("users","*")->all();
 // $res = $db->delete("users",4);
 // echo "<pre>";
