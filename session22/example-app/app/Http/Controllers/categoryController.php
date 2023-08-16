@@ -55,8 +55,8 @@ class categoryController extends Controller
     public function edit(string $id)
     {
         //
-        echo "edit";
-
+            $category = category::find($id);
+            return  view("category.edit",compact('category'));
     }
 
     /**
@@ -64,8 +64,10 @@ class categoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        echo "update";
-
+        $category = category::find($id);
+        $category->name = $request->name;
+        $category->update();
+        return redirect('category');
         //
     }
 

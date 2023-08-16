@@ -13,6 +13,7 @@
             <th>id</th>
             <th>name</th>
             <th>delete</th>
+            <th>edit</th>
         </tr>
         @foreach ($data as $category)
         <tr>
@@ -25,7 +26,7 @@
                     <input type="submit" value="delete">
                 </form>
             </td>
-            {{-- <td><a href="{{url("category/$category->id")}}">delete</a></td> --}}
+            <td><a href="{{url("category/$category->id/edit")}}">edit</a></td>
         </tr>
         @endforeach
     </table>
