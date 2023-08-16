@@ -12,11 +12,20 @@
         <tr>
             <th>id</th>
             <th>name</th>
+            <th>delete</th>
         </tr>
         @foreach ($data as $category)
         <tr>
             <td>{{$category->id}}</td>
             <td>{{$category->name}}</td>
+            <td>
+                <form action="category/{{$category->id}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="delete">
+                </form>
+            </td>
+            {{-- <td><a href="{{url("category/$category->id")}}">delete</a></td> --}}
         </tr>
         @endforeach
     </table>

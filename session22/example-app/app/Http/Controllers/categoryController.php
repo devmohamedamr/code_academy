@@ -46,6 +46,7 @@ class categoryController extends Controller
     public function show(string $id)
     {
         //
+        echo "show";
     }
 
     /**
@@ -54,6 +55,8 @@ class categoryController extends Controller
     public function edit(string $id)
     {
         //
+        echo "edit";
+
     }
 
     /**
@@ -61,6 +64,8 @@ class categoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        echo "update";
+
         //
     }
 
@@ -69,6 +74,8 @@ class categoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $category = category::find($id);
+        $category->delete();
+        return redirect("category");
     }
 }
